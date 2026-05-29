@@ -1,0 +1,2434 @@
+@font-face {
+    font-family: 'Black';
+    src: url('../fonts/YekanBakhFaNum-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bold';
+    src: url('../fonts/YekanBakhFaNum-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ExtraBlack';
+    src: url('../fonts/YekanBakhFaNum-ExtraBlack.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ExtraBold';
+    src: url('../fonts/YekanBakhFaNum-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Light';
+    src: url('../fonts/YekanBakhFaNum-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('../fonts/YekanBakhFaNum-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SemiBold';
+    src: url('../fonts/YekanBakhFaNum-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Thin';
+    src: url('../fonts/YekanBakhFaNum-Thin.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    direction: rtl;
+}
+
+body {
+    background: linear-gradient(to bottom, #D3243B, #D5223E);
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+
+    .swiper-container,
+    .swiper-container2,
+    .swiper-container3,
+    .swiper-container4,
+    .swiper-container4A,
+    .swiper-container4B,
+    .swiper-container-Special {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Yalda-Banner {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+
+        .BackgroundImage {
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                box-shadow: 0px 0 53px 47px #bf302b;
+                filter: saturate(1.1);
+                object-fit: contain;
+            }
+        }
+
+        .Text {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            z-index: 2;
+            right: 14%;
+            top: 25%;
+
+            .Code {
+                font-family: 'Bold', sans-serif;
+                font-size: 18px;
+                padding: 12px 54px;
+                width: fit-content;
+                border: 1px solid #ffffff;
+                border-radius: 20px;
+                background: rgba(218, 65, 55, 0.65);
+                -webkit-backdrop-filter: blur(25px);
+                backdrop-filter: blur(25px);
+                border: 1px solid rgba(255, 255, 255, 0.205);
+                color: #ffffff;
+                margin-bottom: 16px;
+                transform: translateX(-120px);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                user-select: none;
+            }
+
+            .Texts {
+                user-select: none;
+
+                * {
+                    color: #ffffff;
+                }
+
+                h1 {
+                    font-family: 'ExtraBold';
+                    font-size: 52px;
+                }
+
+                h4 {
+                    font-family: 'Thin';
+                    font-size: 42px;
+                }
+            }
+
+            button {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 14px;
+                width: fit-content;
+                box-shadow: 0px 4px 54.4px 0px #D4FC6366;
+                background: linear-gradient(90.19deg, #88F469 -79.46%, #EEFF8D 111.93%);
+                padding: 12px 36px;
+                cursor: pointer;
+                border-radius: 20px;
+                margin-top: 30px;
+
+                &:hover {
+                    transition: scale 0.2s ease-in-out;
+                    scale: 1.03;
+                }
+
+                &:not(:hover) {
+                    transition: scale 0.2s ease-in-out;
+                    scale: 1;
+                }
+
+                span {
+                    color: #383838;
+                    font-family: 'Bold', sans-serif;
+                    font-size: 18px;
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+
+        .ShadowLine {
+            position: absolute;
+            width: 100%;
+            box-shadow: 0 0 80px 120px #ba332f;
+            // #bf302b
+            left: 0;
+            bottom: 0px;
+            z-index: 2;
+        }
+    }
+
+    .Container-Products {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        width: 1200px;
+        margin-top: 20px;
+        align-self: center;
+
+        * {
+            z-index: 2;
+        }
+
+        .Small-Sliders {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: center;
+            width: 100%;
+            gap: 30px;
+
+            .Slides {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: 100%;
+                cursor: pointer;
+
+                .Tag {
+                    position: absolute;
+                    top: -10px;
+                    right: -10px;
+                    background-color: #000000;
+                    width: fit-content;
+                    padding: 6px 14px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 4px;
+                    border-radius: 100px;
+                    z-index: 3;
+
+                    div {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    span {
+                        color: #E9E1B2;
+                        font-size: 12px;
+                        font-family: 'Regular', sans-serif;
+                    }
+                }
+
+                .Section1 {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 30px;
+                    width: 100%;
+                    user-select: none;
+
+                    .Product-Image {
+                        max-width: 190px;
+                        max-height: 230px;
+                        height: 100%;
+                        width: 100%;
+
+                        img {
+                            object-fit: contain;
+                            width: 100%;
+                        }
+                    }
+
+                    .Product-Infonmation {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 14px;
+                        margin-top: 20px;
+                        width: 100%;
+
+                        .Product-Title {
+                            font-family: 'Bold', sans-serif;
+                            font-size: 18px;
+                        }
+
+                        .Product-Details {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 12px;
+
+                            .Word {
+                                font-family: 'Bold', sans-serif;
+                                font-size: 14px;
+                            }
+
+                            .Details {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 6px;
+
+                                * {
+                                    color: #485967;
+                                    font-family: 'Regular';
+                                    font-size: 12px;
+                                }
+
+                                .Detail {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    gap: 6px;
+
+                                    span {
+                                        width: 4px;
+                                        height: 4px;
+                                        border-radius: 50%;
+                                        background-color: #0865FE;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .Product-Price {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
+
+                        .Prices {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+
+                            .Price {
+                                font-size: 16px;
+                                color: #8CA0B2;
+                                font-family: 'Regular', sans-serif;
+                                text-decoration: line-through;
+                                margin-left: 8px;
+                            }
+
+                            .Off-Price {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                gap: 10px;
+
+                                p {
+                                    font-size: 26px;
+                                    font-family: 'ExtraBold', sans-serif;
+                                    color: #FF2727;
+                                }
+
+                                .Off-Label {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    gap: 10px;
+
+                                    .Off-Precent {
+                                        background-color: #FF2727;
+                                        color: #ffffff;
+                                        border-radius: 100px;
+                                        font-family: 'Regular', sans-serif;
+                                        font-size: 12px;
+                                        padding: 2px 10px;
+                                    }
+
+                                    span {
+                                        font-family: 'Regular', sans-serif;
+                                        color: #FF2727;
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .Show-Product {
+                            all: unset;
+                            cursor: pointer;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            gap: 10px;
+
+                            &:hover {
+                                transition: scale 0.15s ease-in-out;
+                                scale: 1.05;
+                            }
+
+                            div {
+                                display: flex;
+                                align-items: center;
+                            }
+
+                            p {
+                                font-family: 'Bold', sans-serif;
+                                font-size: 14px;
+                                color: #0865FE;
+                            }
+                        }
+                    }
+                }
+
+                .Section2 {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    margin-top: 40px;
+
+                    .Product-Balance {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        .Inf {
+                            font-family: 'Regular', sans-serif;
+                            font-size: 14px;
+
+                            strong {
+                                color: #00C09B;
+                            }
+                        }
+
+                        .Balance-Bar {
+                            background-color: #eff1f3;
+                            height: 4px;
+                            width: 310px;
+                            border-radius: 100px;
+                            overflow: hidden;
+                            position: relative;
+                            user-select: none;
+
+                            .Bar {
+                                background-color: #00C09B;
+                                height: 4px;
+                                right: 0;
+                                width: 44%;
+                                border-radius: 100px;
+                            }
+                        }
+                    }
+
+                    .Off-Time {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: end;
+                        user-select: none;
+
+                        .Word {
+                            color: #FF2727;
+                            font-family: 'Regular', sans-serif;
+                            font-size: 14px;
+                        }
+
+                        .Time {
+                            color: #FF2727;
+                            font-family: 'Bold', sans-serif;
+                            font-size: 20px;
+
+                            * {
+                                color: #FF2727;
+                                font-family: 'Bold', sans-serif;
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .Slider {
+                background-color: #FFFFFF;
+                border-radius: 20px;
+                padding: 30px;
+                max-height: 420px;
+            }
+
+            .Slider.Right {
+                width: 70%;
+                overflow: hidden;
+            }
+
+            .Slider.Left {
+                width: 30%;
+                overflow: hidden;
+
+                .Slides {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+
+                    .Product-Image {
+                        max-width: 140px;
+                        max-height: 180px;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            object-fit: contain;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .Product-Title {
+                        font-family: 'Bold', sans-serif;
+                        font-size: 14px;
+                    }
+
+                    .Product-Price {
+                        margin-top: 10px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+
+                        .Prices {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 4px;
+
+                            .Price {
+                                color: #485967;
+                                font-family: 'Regular', sans-serif;
+                                text-decoration: line-through;
+                                font-size: 14px;
+                            }
+
+                            .Off-Price {
+                                color: #0865FE;
+                                font-size: 16px;
+                                font-family: 'Bold', sans-serif;
+                            }
+                        }
+
+                        .Show-Product {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: end;
+                            gap: 8px;
+
+                            .Show {
+                                all: unset;
+                                cursor: pointer;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                gap: 10px;
+
+                                &:hover {
+                                    transition: scale 0.15s ease-in-out;
+                                    scale: 1.05;
+                                }
+
+                                div {
+                                    display: flex;
+                                    align-items: center;
+
+                                    svg {
+                                        fill: #FF2727;
+
+                                        path {
+                                            fill: #FF2727;
+                                        }
+                                    }
+                                }
+
+                                p {
+                                    font-family: 'Bold', sans-serif;
+                                    font-size: 14px;
+                                    color: #FF2727;
+                                }
+                            }
+
+                            .Off-Precent {
+                                width: fit-content;
+                                height: fit-content;
+                                background-color: #FF2727;
+                                color: #ffffff;
+                                border-radius: 100px;
+                                font-family: 'Regular', sans-serif;
+                                font-size: 12px;
+                                padding: 2px 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .Big-Slider {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
+            max-height: 420px;
+            overflow: hidden;
+            margin-bottom: 30px;
+
+            .Slides {
+                height: 100%;
+                max-width: 300px;
+                border-radius: 20px;
+                background-color: #ffffff;
+                padding: 30px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                gap: 20px;
+
+                .Tag {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    background-color: #000000;
+                    width: fit-content;
+                    padding: 6px 14px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 4px;
+                    border-radius: 100px;
+                    z-index: 3;
+
+                    div {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    span {
+                        color: #E9E1B2;
+                        font-size: 12px;
+                        font-family: 'Regular', sans-serif;
+                    }
+                }
+
+                .Product-Image {
+                    max-width: 140px;
+                    max-height: 180px;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        object-fit: contain;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .Product-Title {
+                    font-family: 'Bold', sans-serif;
+                    font-size: 14px;
+                }
+
+                .Product-Price {
+                    margin-top: 10px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+
+                    .Prices {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+
+                        .Price {
+                            color: #485967;
+                            font-family: 'Regular', sans-serif;
+                            text-decoration: line-through;
+                            font-size: 14px;
+                        }
+
+                        .Off-Price {
+                            color: #0865FE;
+                            font-size: 16px;
+                            font-family: 'Bold', sans-serif;
+                        }
+                    }
+
+                    .Show-Product {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: end;
+                        gap: 8px;
+
+                        .Off-Precent {
+                            width: fit-content;
+                            height: fit-content;
+                            background-color: #FF2727;
+                            color: #ffffff;
+                            border-radius: 100px;
+                            font-family: 'Regular', sans-serif;
+                            font-size: 12px;
+                            padding: 2px 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .Transportation-Banner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        margin: 40px 0;
+        overflow-x: hidden !important;
+        overflow-y: visible;
+        position: relative;
+
+        .Banner-Image {
+            max-width: 100%;
+            min-width: 820px;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+
+            img {
+                object-fit: cover;
+            }
+        }
+
+        .Banner-Texts {
+            z-index: 2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 1200px;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            * {
+                color: #262626;
+            }
+
+            .Text {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                transform: translate(0px, -120px);
+
+                .BigText {
+                    display: flex;
+                    flex-direction: column;
+
+                    span {
+                        display: none;
+                    }
+
+                    * {
+                        font-family: 'ExtraBold', sans-serif;
+                        font-size: 40px;
+                    }
+                }
+
+                .SmallText {
+                    font-family: 'Regular', sans-serif;
+                    font-size: 20px;
+                    word-spacing: -1px;
+                }
+            }
+        }
+
+        .Icons {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            gap: 30px;
+            margin-left: 20px;
+
+            .Square {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                padding: 30px;
+                background: rgba(255, 226, 201, 0.45);
+                -webkit-backdrop-filter: blur(12px);
+                backdrop-filter: blur(12px);
+                border-radius: 32px;
+                height: 230px;
+                width: 230px;
+                border: 1.5px solid transparent;
+                border-top-color: rgb(255, 255, 255, 0.75);
+                border-right-color: rgb(255, 255, 255, 0.75);
+                border-bottom-color: rgb(245, 224, 195, 0.75);
+                border-left-color: rgb(245, 224, 195, 0.75);
+                box-shadow: 0px 0px 31px 4px #EDC9AD;
+
+                .Icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    svg {
+                        width: 75px;
+                        height: 75px;
+                    }
+                }
+
+                .Word {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    * {
+                        font-family: 'Bold', sans-serif;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .Square.a {
+                transform: translate(150px, -30px);
+            }
+
+            .Square.b {
+                transform: translate(0px, -30px);
+            }
+        }
+    }
+
+    .Category-Discount {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 95vw;
+        margin: 40px 0;
+        overflow: hidden;
+        align-self: center;
+        gap: 30px;
+
+        .Icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        svg {
+            height: 70px;
+            width: 70px;
+        }
+
+        .Head-Text {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            width: 100%;
+
+            .Word {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                p {
+                    color: #ffffff;
+                    font-family: 'Regular', sans-serif;
+                    font-size: 24px;
+                    line-height: 0;
+                    margin-bottom: -6px;
+                }
+            }
+        }
+
+        .Nav-Bottom {
+            display: flex;
+        }
+
+        .Nav-Top {
+            display: none;
+        }
+
+        .Nav-Bottom,
+        .Nav-Top {
+            flex-direction: row;
+            align-items: center;
+            margin: 6px 0;
+        }
+
+        .Slider-Place {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+
+            .Slide {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                width: 380px;
+                height: 550px;
+                overflow: hidden;
+                border-radius: 48px 62px 62px 62px;
+                user-select: none;
+                z-index: 1 !important;
+
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 2 !important;
+                    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.02) 100%);
+                }
+
+                .Texts {
+                    position: absolute;
+                    z-index: 3 !important;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    left: 50%;
+                    bottom: 40px;
+                    transform: translateX(-50%);
+                    width: 100%;
+                    gap: 0px;
+
+                    * {
+                        color: #ffffff;
+                    }
+
+                    .B-Text {
+                        font-family: 'ExtraBold', sans-serif;
+                        font-size: 36px;
+                    }
+
+                    .S-Text {
+                        font-family: 'Light', sans-serif;
+                        font-size: 14px;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .swiper-button-next-Discount,
+    .swiper-button-prev-Discount,
+    .swiper-button-next-DiscountPlus,
+    .swiper-button-prev-DiscountPlus,
+    .swiper-button-prev-DiscountPlusA,
+    .swiper-button-next-DiscountPlusA,
+    .swiper-button-prev-DiscountPlusB,
+    .swiper-button-next-DiscountPlusB {
+        all: unset;
+
+        &::after {
+            all: unset;
+        }
+
+        &::before {
+            all: unset;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover {
+            transition: scale 0.17s ease-in-out;
+            scale: 1.1;
+        }
+
+        &:not(:hover) {
+            transition: scale 0.17s ease-in-out;
+            scale: 1;
+        }
+    }
+
+    .Social-Links {
+        max-width: 1200px;
+        width: 100%;
+        padding: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        align-self: center;
+        margin-bottom: 20px;
+        user-select: none;
+        background-color: #1B1A1A;
+        border: 1px solid #71D522;
+        border-radius: 20px;
+        z-index: 2;
+
+        .Text {
+            display: flex;
+            align-items: center;
+            width: 380px;
+
+            p {
+                color: #ffffff;
+                font-family: 'Bold', sans-serif;
+                font-size: 18px;
+            }
+        }
+
+        .Links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 14px;
+
+            .Box {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                width: 130px;
+                height: 50px;
+                gap: 10px;
+                background-color: #ffffff;
+                cursor: pointer;
+
+                &:hover {
+                    transition: scale 0.2s ease-in-out;
+                    scale: 1.05;
+                }
+
+                &:not(:hover) {
+                    transition: scale 0.2s ease-in-out;
+                    scale: 1;
+                }
+
+                .Icon {
+                    display: flex;
+                    align-items: center;
+                }
+
+                p {
+                    color: #333333;
+                    font-family: 'Bold', sans-serif;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .SmallArrow {
+            display: none;
+            align-items: center;
+        }
+
+        .Paragraph {
+            font-size: 18px;
+            color: #ffffff;
+            font-family: 'Bold', sans-serif;
+            line-height: 35px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .Slider-DiscountPlus {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-items: center;
+        gap: 40px;
+        max-width: 1200px;
+        width: 100%;
+        margin-bottom: 100px;
+
+        .DiscountPlus-Head {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+
+            .Nav {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .swiper-button-next-DiscountPlus,
+                .swiper-button-prev-DiscountPlus,
+                .swiper-button-prev-DiscountPlusA,
+                .swiper-button-next-DiscountPlusA,
+                .swiper-button-prev-DiscountPlusB,
+                .swiper-button-next-DiscountPlusB {
+                    z-index: 4;
+                }
+            }
+
+            .Word {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+
+                p {
+                    font-size: 22px;
+                    font-family: 'Bold', sans-serif;
+                    color: #ffffff;
+                    margin-bottom: -10px;
+                }
+
+                .Icon {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        .Slider-Place {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100vw !important;
+            padding: 200px 100px;
+            margin: -200px 0;
+            gap: 20px;
+            overflow: hidden;
+            user-select: none;
+
+            .Slider {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                border-radius: 24px;
+                position: relative;
+                background-color: transparent;
+                z-index: 1;
+
+                .swiper-slide {
+                    width: 220px !important;
+                    height: 330px !important;
+                    background: linear-gradient(180.54deg, #D5223E 74.93%, #468a15 115.92%);
+                    background-blend-mode: overlay;
+                    border-radius: 24px;
+                    position: relative;
+                    box-shadow: 0px 50px 111px 0px #F6546E99;
+                    padding: 30px 26px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .Slide {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 12px;
+                    width: 100% !important;
+                    height: 100% !important;
+
+                    .Product-Image {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        max-width: 120px;
+                        max-height: 160px;
+                        width: 100%;
+                        height: 100%;
+
+                        img {
+                            width: 100%;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .Product-Title {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+                        margin-top: 10px;
+
+                        p {
+                            font-family: 'Bold', sans-serif;
+                            color: #ffffff;
+                            font-size: 14px;
+                            text-align: center;
+                        }
+                    }
+
+                    .Prices {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: end;
+                        width: 100%;
+                        margin-top: 10px;
+                        gap: 8px;
+
+                        .Price {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            .Not-Discount {
+                                font-family: 'Regular', sans-serif;
+                                color: #E5ECF199;
+                                text-decoration: line-through;
+                                font-size: 16px;
+                                line-height: 20px;
+                            }
+
+                            .Discount {
+                                font-family: 'ExtraBold', sans-serif;
+                                color: #E5ECF1;
+                                font-size: 16px;
+                                line-height: 20px;
+                            }
+                        }
+
+                        .Dis-Precent {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            .Off-Precent {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: center;
+                                color: #ffffff;
+                                font-family: 'Regular', sans-serif;
+                                font-size: 11px;
+                                line-height: 0;
+                                background-color: #FF253F;
+                                border-radius: 100px;
+                                width: fit-content;
+                                padding: 10px;
+                            }
+
+                            span {
+                                color: #ffffff;
+                                font-family: 'Light', sans-serif;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .Slider-DiscountPlus.A {
+        max-width: 1200px !important;
+        gap: 20px;
+        align-items: start;
+
+        .DiscountPlus-Head {
+            position: relative;
+
+            .Melon {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                rotate: -45deg;
+                z-index: 4 !important;
+                left: 0;
+                top: 24px;
+
+                img {
+                    width: 120px;
+                    height: 120px;
+                    object-fit: contain;
+                }
+            }
+
+            .SeeMore {
+                position: absolute;
+                background-color: #E5ECF1;
+                width: 200px;
+                height: 48px;
+                z-index: 1 !important;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                rotate: -90deg;
+                flex-shrink: 1;
+                left: -63px;
+                top: 240px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                cursor: pointer;
+                gap: 10px;
+                padding-top: 8px;
+
+                p {
+                    font-size: 12px;
+                    font-family: 'Bold', sans-serif;
+                    color: #485967;
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    rotate: 90deg;
+                }
+            }
+        }
+
+        .Slider-Place {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: calc(100% - 60px) !important;
+            padding: 0px;
+            margin: 0;
+            gap: 20px;
+            overflow: hidden;
+            user-select: none;
+            border-radius: 20px;
+            border-bottom-left-radius: 40px;
+            border-top-left-radius: 40px;
+            border: 1px solid #FFFFFF99;
+
+            .Slider {
+                z-index: 2 !important;
+            }
+        }
+
+        .swiper-slide {
+            box-shadow: none !important;
+            border-radius: 0 !important;
+            border: 1.5px solid #FFFFFF99;
+            border-top: none !important;
+            border-bottom: none !important;
+
+            &:first-child {
+                // border-top-right-radius: 20px !important;
+                // border-bottom-right-radius: 20px !important;
+                border-right: none !important;
+            }
+
+            &:last-child {
+                // border-top-left-radius: 20px !important;
+                // border-bottom-left-radius: 20px !important;
+                border-left: none !important;
+            }
+
+            .Slide {
+                border-radius: 0 !important;
+            }
+        }
+    }
+
+    .Slider-DiscountPlus.A.Motavasete {
+        margin-top: 50px;
+
+        .Slider-Place {
+            width: 100% !important;
+        }
+
+        .DiscountPlus-Head {
+            position: relative;
+            overflow: visible !important;
+
+            .Offer-Timer {
+                p {
+                    font-size: 16px;
+                    font-family: 'Regular', sans-serif;
+                    color: #ffffff;
+                }
+
+                border-radius: 100px;
+                width: 210px;
+                height: 50px;
+                padding: 0 4px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(180deg, #FF7D8D 0%, #FF253F 100%);
+            }
+
+            .Pagination {
+                display: flex;
+                flex-direction: row;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 240px !important;
+                height: 60px !important;
+                background-color: #ffffff;
+                border-radius: 100px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 10px;
+
+                * {
+                    font-size: 14px;
+                    font-family: 'Bold', sans-serif;
+                    color: #333333;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                .Options-Classes-Selecting {
+                    width: 210px;
+                    height: 40px;
+                    padding: 4px;
+                    border-radius: 100px;
+                    background-color: #F3F7FB;
+
+                    .Class-Name-Select {
+                        height: 100%;
+                        width: 60px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 100px;
+                        cursor: pointer;
+                    }
+
+                    .Class-Name-Select.selected {
+                        background-color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+
+    .Discount-Code-Banner {
+        align-self: center;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 290px;
+        background: linear-gradient(89.45deg, #00C09B -12.67%, #9DF782 25.56%, #ACEF98 74.38%, #61EDD2 104.96%);
+        margin-bottom: 80px;
+
+        .Items {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            max-width: 1240px;
+            width: 100%;
+
+            .MelonImage {
+                display: flex;
+                align-items: center;
+                transform: translate(0px, -10px);
+                width: 250px;
+                margin-left: -50px;
+
+                img {
+                    width: 300px;
+                    height: 245px;
+                    object-fit: contain;
+                }
+            }
+
+            .Texts {
+                max-width: 440px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .Big {
+                    color: #000000DE;
+                    font-family: 'ExtraBold', sans-serif;
+                    font-size: 32px;
+                    letter-spacing: -1px;
+                }
+
+                .Small {
+                    color: #00000099;
+                    font-family: 'Regular';
+                }
+            }
+
+            .Box-Copy-Code {
+                width: 380px;
+                height: 380px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 20px;
+                border: 2px solid #D5223E;
+                position: relative;
+                overflow: hidden;
+                gap: 10px;
+
+                * {
+                    z-index: 3;
+                }
+
+                .Back {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 2 !important;
+                    width: 100%;
+                    height: 100%;
+                    background: radial-gradient(50% 50% at 50% 50%, rgb(114, 118, 124, 0.75) 10%, #020202 100%);
+                }
+
+                img {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 1 !important;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                }
+
+                .Words {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    .Big {
+                        color: #ffffff;
+                        font-family: 'ExtraBold', sans-serif;
+                        font-size: 30px;
+                        text-align: center;
+                    }
+
+                    .Small {
+                        color: #ffffff;
+                        font-family: 'Regular', sans-serif;
+                        text-align: center;
+                        font-size: 20px;
+                    }
+                }
+
+                .Copy-Place {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 6px 16px 6px 6px;
+                    width: 200px;
+                    height: 50px;
+                    background-color: #FFFFFF;
+                    border-radius: 12px;
+                    margin-top: 10px;
+                    margin-bottom: -10px;
+
+                    p {
+                        color: #333333;
+                        font-size: 14px;
+                        font-family: 'Bold', sans-serif;
+                    }
+
+                    .CopyBtn {
+                        cursor: pointer;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 4px;
+                        background-color: #D5223E;
+                        width: 86px;
+                        height: 36px;
+                        border-radius: 12px;
+
+                        span {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: center;
+                            color: #ffffff;
+                            font-family: 'Regular', sans-serif;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            .Using-Bar {
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 26px;
+                gap: 6px;
+
+                .Word1 {
+                    color: #ffffff;
+                    font-family: 'Regular', sans-serif;
+                    font-size: 14px;
+                    width: 100%;
+                }
+
+                .Bar-B {
+                    width: 250px;
+                    height: 5px;
+                    border-radius: 100px;
+                    background-color: #D5223E;
+                    margin-bottom: 6px;
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    overflow: hidden;
+
+                    .Bar {
+                        position: absolute;
+                        border-radius: 100px;
+                        background-color: #ffffff;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 0;
+                        width: 70%;
+                        height: 5px;
+                    }
+                }
+
+                .Word2 {
+                    color: #ffffff;
+                    font-family: 'Bold', sans-serif;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1250px) {
+    body {
+        .Container-Products {
+            max-width: 85vw;
+        }
+
+        .Transportation-Banner {
+            .Banner-Texts {
+                .Text {
+                    margin-right: 20px;
+
+                    .BigText {
+                        * {
+                            font-size: 34px;
+                        }
+                    }
+
+                    .SmallText {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .Category-Discount {
+            .Head-Text {
+                max-width: none;
+                width: 90vw;
+            }
+        }
+
+        .Slider-DiscountPlus {
+            max-width: none;
+            width: 90vw;
+        }
+    }
+}
+
+@media (max-width:1150px) {
+    body {
+        overflow-x: hidden;
+
+        .Yalda-Banner {
+
+            .Text {
+                right: 4%;
+                z-index: 3;
+
+                .Code {
+                    font-size: 12px;
+                    padding: 12px 12px;
+                    border-radius: 30px;
+                    left: 50%;
+                    transform: translateX(-120%);
+                    margin-bottom: 8px;
+                }
+
+                .Texts {
+                    h1 {
+                        font-size: 36px;
+                    }
+
+                    h4 {
+                        font-size: 26px;
+                    }
+                }
+
+                button {
+                    margin-top: 8px;
+                    padding: 10px;
+                    gap: 8px;
+                    border-radius: 14px;
+
+                    span {
+                        font-size: 14px;
+                    }
+
+                    svg {
+                        width: 7px;
+                        height: 14px;
+                    }
+                }
+            }
+
+            .ShadowLine {
+                box-shadow: 0 0 56px 70px #ba332f;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    bottom: -30px;
+                    box-shadow: 0 0 156px 130px #ba342f88;
+                }
+            }
+        }
+
+        .Container-Products {
+            .Small-Sliders {
+                .Slider.Left {
+                    .Slides {
+                        .Product-Price {
+                            align-items: flex-start;
+
+                            .Show-Product {
+                                .Show {
+                                    display: none !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .Social-Links {
+            max-width: none;
+            width: 95vw;
+        }
+
+        .Discount-Code-Banner {
+            .Items {
+                .MelonImage {
+                    margin: 0;
+
+                    img {
+                        width: 190px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1050px) {
+    body {
+        .Container-Products {
+            .Small-Sliders {
+                .Slider.Right {
+                    .Slides {
+                        .Section1 {
+                            .Product-Infonmation {
+                                .Product-Title {
+                                    font-size: 16px;
+                                }
+
+                                .Product-Details {
+                                    .Word {
+                                        font-size: 12px;
+                                    }
+
+                                    .Details {
+                                        * {
+                                            font-size: 10px;
+                                        }
+                                    }
+                                }
+
+                                .Product-Price {
+                                    .Prices {
+                                        .Price {
+                                            font-size: 14px;
+                                        }
+
+                                        .Off-Price {
+                                            p {
+                                                font-size: 20px;
+                                            }
+                                        }
+                                    }
+
+                                    .Show-Product {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .Transportation-Banner {
+            .Banner-Texts {
+                .Text {
+                    .BigText {
+                        * {
+                            font-size: 30px;
+                        }
+                    }
+
+                    .SmallText {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .Category-Discount {
+            .Slider-Place {
+                .Slide {
+                    .Texts {
+                        gap: 4px;
+
+                        .B-Text {
+                            font-size: 28px;
+                        }
+
+                        .S-Text {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .Social-Links {
+            flex-direction: column;
+            gap: 20px;
+
+            .BigArrow {
+                display: none;
+            }
+
+            .SmallArrow {
+                display: flex;
+            }
+
+            .Text {
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+
+                p {
+                    text-align: center;
+                    font-size: 14px;
+                }
+            }
+
+            .Paragraph {
+                font-size: 14px;
+                line-height: 26px;
+            }
+        }
+
+        .Slider-DiscountPlus.A {
+            .Slider-Place {
+                width: 100% !important;
+            }
+
+            .DiscountPlus-Head {
+                overflow: hidden;
+
+                .Melon {
+                    display: none;
+                }
+
+                .SeeMore {
+                    background-color: transparent;
+                    left: -60px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    rotate: none !important;
+
+                    div {
+                        display: none;
+                    }
+
+                    p {
+                        color: #FFFFFF;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+        .Discount-Code-Banner {
+            .Items {
+                .Texts {
+                    padding-left: 10px;
+                    width: auto;
+
+                    .Big {
+                        font-size: 22px;
+                    }
+
+                    .Small {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1000px) {
+    .Discount-Code-Banner {
+        margin-top: 40px !important;
+        margin-bottom: 240px !important;
+        justify-content: center;
+        align-items: center;
+
+        * {
+            text-align: center;
+        }
+
+        .Items {
+            flex-direction: column !important;
+
+            .MelonImage {
+                transform: translate(-20px, 20px) !important;
+                margin: 0 !important;
+
+                * {
+                    margin: 0 !important;
+                    transform: none !important;
+                }
+            }
+
+            .Texts {
+                margin: 0 !important;
+                transform: none !important;
+                width: 90%;
+                margin-bottom: 14px !important;
+            }
+
+            .Box-Copy-Code {
+                width: 280px !important;
+                height: 300px !important;
+                margin-bottom: -40px !important;
+
+                .Words {
+                    .Big {
+                        font-size: 24px !important;
+                    }
+
+                    .Small {
+                        font-size: 14px !important;
+                    }
+                }
+
+                .Using-Bar {
+                    * {
+                        font-size: 12px !important;
+                    }
+
+                    .Bar-B {
+                        margin: 10px 0;
+                        width: 90% !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .Slider-DiscountPlus.A.Motavasete {
+        .DiscountPlus-Head {
+            flex-direction: column;
+            padding-bottom: 80px;
+            gap: 20px;
+
+            .Word {
+                width: 100%;
+            }
+
+            .Pagination {
+                bottom: 0 !important;
+            }
+        }
+    }
+}
+
+@media (max-width:900px) {
+    body {
+        * {
+            cursor: default !important;
+        }
+
+        .swiper-button-next-Discount,
+        .swiper-button-prev-Discount,
+        .swiper-button-next-DiscountPlus,
+        .swiper-button-prev-DiscountPlus,
+        .swiper-button-prev-DiscountPlusA,
+        .swiper-button-next-DiscountPlusA,
+        .swiper-button-prev-DiscountPlusB,
+        .swiper-button-next-DiscountPlusB {
+            cursor: default !important;
+        }
+
+        .swiper-button-next-DiscountPlus.a,
+        .swiper-button-prev-DiscountPlus.a,
+        .swiper-button-prev-DiscountPlusA,
+        .swiper-button-next-DiscountPlusA,
+        .swiper-button-prev-DiscountPlusB,
+        .swiper-button-next-DiscountPlusB {
+            display: none;
+        }
+
+        .Transportation-Banner {
+            .Banner-Texts {
+                .Text {
+                    .BigText {
+                        * {
+                            font-size: 26px;
+                        }
+                    }
+
+                    .SmallText {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .Icons {
+                .Square.a {
+                    transform: translate(100px, -30px);
+                }
+            }
+        }
+
+        .Category-Discount {
+            width: 95vw !important;
+
+            svg {
+                height: 40px;
+                width: 40px;
+            }
+
+            .Nav-Top {
+                display: flex;
+            }
+
+            .Nav-Bottom {
+                display: none;
+            }
+
+            .Slider-Place {
+                .Slide {
+                    width: 320px;
+                    height: 460px;
+                }
+            }
+
+            .Head-Text {
+                .Word {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .Slider-DiscountPlus {
+            svg {
+                width: 40px;
+                height: 40px;
+            }
+
+            .Slider-Place {
+                width: 100vw;
+                padding: 200px 30px;
+            }
+
+            .DiscountPlus-Head {
+                .Word {
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:830px) {
+    body {
+        .Container-Products {
+            .Small-Sliders {
+                .Slider.Right {
+                    width: 100%;
+                }
+
+                .Slider.Left {
+                    display: none !important;
+                    visibility: hidden !important;
+                }
+            }
+        }
+
+        .Transportation-Banner {
+            margin: 0;
+            margin-top: -54px;
+            margin-bottom: 20px;
+            height: 430px;
+
+            .Banner-Image {
+                img {
+                    width: 100%;
+                    transform: translateY(30px);
+                }
+            }
+
+            .Banner-Texts {
+                flex-direction: column-reverse;
+                height: 100%;
+                padding-bottom: 20px;
+
+                .Text {
+                    transform: none;
+                    align-items: center;
+                    gap: 0;
+                    margin-right: 0;
+
+                    .BigText {
+                        flex-direction: row;
+
+                        span {
+                            display: flex;
+                        }
+
+                        * {
+                            font-size: 18px;
+                        }
+                    }
+
+                    .SmallText {
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            .Icons {
+                margin: 0;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                width: 100%;
+                padding: 20px;
+                transform: translateY(20px);
+                z-index: 4 !important;
+
+                .Square {
+                    width: 130px;
+                    height: 130px;
+                    border-radius: 10px;
+                    padding: 0;
+                    border: 1px solid #ffffff;
+                    transform: none !important;
+
+                    .Icon {
+                        svg {
+                            width: 32px;
+                            height: 32px;
+                        }
+                    }
+
+                    .Word {
+                        * {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:660px) {
+    body {
+        .Yalda-Banner {
+            .Text {
+                top: 10%;
+            }
+
+            .BackgroundImage {
+                overflow: hidden;
+
+                img {
+                    object-fit: cover;
+                    width: 130%;
+                    margin-right: -100px;
+                }
+            }
+        }
+
+        .Container-Products {
+            .Big-Slider {
+                .Slides {
+                    max-width: 85vw;
+                }
+            }
+
+            .Small-Sliders {
+                .Slider.Right {
+                    .Slides {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 0;
+
+                        .Section1 {
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 0;
+
+                            .Product-Image {
+                                max-height: 170px !important;
+                                max-width: 100px !important;
+                            }
+
+                            .Product-Infonmation {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+
+                                .Product-Title {
+                                    font-size: 14px;
+                                }
+
+                                .Product-Details {
+                                    display: none;
+                                }
+
+                                .Product-Price {
+                                    justify-content: center;
+                                    margin-top: 10px;
+
+                                    .Prices {
+                                        .Price {
+                                            font-size: 12px;
+                                        }
+
+                                        .Off-Price {
+                                            p {
+                                                font-size: 16px;
+                                            }
+
+                                            .Off-Label {
+                                                gap: 0;
+
+                                                span {
+                                                    font-size: 12px;
+                                                }
+
+                                                .Off-Precent {
+                                                    font-size: 10px;
+                                                    padding: 2px 6px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .Section2 {
+                            flex-direction: column;
+                            margin-top: 20px;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 14px;
+
+                            .Product-Balance {
+                                .Balance-Bar {
+                                    width: 250px;
+                                }
+                            }
+
+                            .Off-Time {
+                                flex-direction: row !important;
+                                align-items: center;
+                                gap: 10px;
+
+                                .Time {
+                                    * {
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:520px) {
+    body {
+        .Yalda-Banner {
+            .ShadowLine {
+                bottom: -10px;
+
+                &::after {
+                    box-shadow: 0 0 156px 130px #ba342f5b;
+                }
+            }
+
+            .BackgroundImage {
+
+                img {
+                    object-fit: cover;
+                    width: 120%;
+                    margin-right: -20px;
+                }
+            }
+
+            .Text {
+                .Code {
+                    transform: translateX(-80%);
+                }
+
+                .Texts {
+                    h1 {
+                        font-size: 26px;
+                    }
+
+                    h4 {
+                        font-size: 22px;
+                    }
+                }
+
+                button {
+                    span {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:340px) {
+    body {
+        .Transportation-Banner {
+            .Banner-Texts {
+                .Text {
+                    .BigText {
+                        * {
+                            font-size: 14px;
+                        }
+                    }
+
+                    .SmallText {
+                        font-size: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
