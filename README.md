@@ -58,9 +58,6 @@ cd payetakht-ketab-yalda-campaign
 
 Simply open `index.html` in your browser.
 
-## 📸 Preview
-
-Add screenshots or GIF previews here.
 
 ## 🎯 Use Cases
 
